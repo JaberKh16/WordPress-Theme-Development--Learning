@@ -13,6 +13,27 @@
 </head>
 <body>
     <?php body_class(); ?>
+    <div class="image-area1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <!-- // static image showing -->
+                    <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/image-1.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="image-area2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <!-- // dynamic image showing -->
+                    <a href=""><img src="<?php echo get_theme_mod('logo_setting'); ?>" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
 <!-- to include wp footer -->
 <?php wp_footer(); ?>
