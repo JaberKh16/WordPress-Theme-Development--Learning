@@ -11,3 +11,10 @@ body{
     width: 100px;
     height: 100px;
 }
+
+body{
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poor Story', cursive;
+}
