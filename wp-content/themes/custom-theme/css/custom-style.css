@@ -18,3 +18,22 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Poor Story', cursive;
 }
+
+.navbar {
+    background: #050555 !important;
+}
+.nav-link {
+    color: #FFFFFF !important;
+}
+
+.dropdown-menu{
+    background: #050555 !important;
+}
+
+.dropdown-item{
+    color: #FFFFFF !important;
+}
+.navbar-brand img{
+    width: 150px;
+    height: 40px;
+}
