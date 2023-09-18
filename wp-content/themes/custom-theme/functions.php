@@ -231,7 +231,7 @@ add_action('customize_register', 'customize_header_logo_on_theme_customization')
 function customize_header_logo_on_theme_customization($wp_customize)
 {
     // Create a new directory inside the uploads directory (e.g., 'header_logos')
-    $custom_new_directory = wp_upload_dir()['basedir'] . '/custom-uploads/header_logos';
+    $custom_new_directory = wp_upload_dir()['basedir'] . '/custom-uploads/';
     var_dump($custom_new_directory);
 
     if (!file_exists($custom_new_directory)) {
@@ -246,7 +246,7 @@ function customize_header_logo_on_theme_customization($wp_customize)
 
     // Set customizer settings info
     $wp_customize->add_setting('logo_setting', array(
-        'default' => get_template_directory_uri() . '/custom-uploads/header_logos/image-1.png', // Set a default image
+        'default' => get_template_directory_uri() . '/custom-uploads/image-1.png', // Set a default image
     ));
 
     // Set customizer control info
@@ -266,7 +266,7 @@ function customize_header_logo_on_theme_customization($wp_customize)
     $wp_customize->get_setting('logo_setting')->transport = 'postMessage'; // Enable live preview
     $wp_customize->get_setting('logo_setting')->override = true; // Enable custom directory handling
     $wp_customize->get_setting('logo_setting')->upload_dir = $custom_new_directory; // Set custom upload directory path
-    $wp_customize->get_setting('logo_setting')->upload_url_path = wp_upload_dir()['baseurl'] . '/custom-uploads/header_logos/'; // Set URL for the custom directory
+    $wp_customize->get_setting('logo_setting')->upload_url_path = wp_upload_dir()['baseurl'] . '/custom-uploads/'; // Set URL for the custom directory
 
 }
 
