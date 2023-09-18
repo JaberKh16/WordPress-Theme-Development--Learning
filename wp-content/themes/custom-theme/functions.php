@@ -29,13 +29,13 @@ add_filter('body_class', 'remove_admin_bar_body_class', 20);
     
 //     // registering theme custom stylesheet - for wordpress custom stylesheet
 //     // wp_register_style('register_handle_name', src, array $dependancy, 'verison', 'devicemapper');
-//     wp_register_style('theme_custom_stylesheet_bootstrap', get_template_directory_uri().'css/bootstrap.css', array(), '5.3.2', 'all');
+//     wp_register_style('theme_custom_stylesheet_bootstrap', get_template_directory_uri().'/assets/css/bootstrap.css', array(), '5.3.2', 'all');
 //     // registering theme custom stylesheet - for wordpress custom js file
 //     // array('jquery') as the dependency for the JavaScript file ensures that jQuery is loaded before Bootstrap, as Bootstrap relies on jQuery.
-//     wp_register_style('theme_custom_stylesheet_bootstrap', get_template_directory_uri().'js/bootstrap.bundle.js', array('jquery'), '5.3.2', true);
+//     wp_register_style('theme_custom_stylesheet_bootstrap', get_template_directory_uri().'/assets/js/bootstrap.bundle.js', array('jquery'), '5.3.2', true);
 //     // registering theme custom stylesheet - for wordpress bootstrap stylesheet
 //     // here '1.0.0' is the theme version we have setted
-//     wp_register_style('theme_custom_stylesheet', get_template_directory_uri().'css/custom-style.css', array(), '1.0.0', 'all');
+//     wp_register_style('theme_custom_stylesheet', get_template_directory_uri().'/assets/css/custom-style.css', array(), '1.0.0', 'all');
     
     
 //     // enqueing theme outline stylesheet - for wordpress known stylesheet
@@ -55,13 +55,13 @@ add_filter('body_class', 'remove_admin_bar_body_class', 20);
 function enqueue_theme_styles_and_scripts()
 {
     // Register Bootstrap CSS
-    wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '5.3.2', 'all');
+    wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), '5.3.2', 'all');
     
     // Register Bootstrap JS
-    wp_register_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.bundle.js', array('jquery'), '5.3.2', true);
+    wp_register_script('bootstrap-js', get_template_directory_uri() . '/assets//js/bootstrap.bundle.js', array('jquery'), '5.3.2', true);
 
     // Register your custom stylesheet
-    wp_register_style('custom-style', get_template_directory_uri() . '/css/custom-style.css', array(), '1.0.0', 'all');
+    wp_register_style('custom-style', get_template_directory_uri() . '/assets//css/custom-style.css', array(), '1.0.0', 'all');
     
     // Enqueue your custom stylesheet
     wp_enqueue_style('custom-style');
