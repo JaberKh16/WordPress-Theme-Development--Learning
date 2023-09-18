@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10">
-                    <a href=""><img src="<?php get_theme_mod('logo_setting'); ?>" alt=""></a>
+                    <a href=""><img src="<?php echo get_theme_mod('logo_setting'); ?>" alt=""></a>
                 </div>
             </div>
         </div>
@@ -72,6 +72,18 @@
         </div>
         </nav>
     </div>
+
+    <footer id="footer-area">
+        <section id="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><?php echo get_theme_mod('footer_copyright_setting'); ?></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
     
     
 

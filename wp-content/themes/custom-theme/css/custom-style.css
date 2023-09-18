@@ -33,6 +33,11 @@ body{
 .dropdown-item{
     color: #FFFFFF !important;
 }
+
+.dropdown-menu li:hover{
+    color: #092272 !important;
+}
+
 .navbar-brand img{
     width: 150px;
     height: 40px;

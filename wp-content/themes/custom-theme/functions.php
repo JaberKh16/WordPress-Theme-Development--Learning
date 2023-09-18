@@ -316,3 +316,41 @@ add_action('wp_enqueue_scripts', 'add_google_fonts_cdn_link');
 // Register Menu
 register_nav_menu('main_menu', __('Main Menu', 'setup_english'));
 
+
+// To Set Walker Menu
+function setup_walker_nav_menu($item_output, $item, $args)
+{
+    // if description related to nav menu is not empty
+    if(!empty($item->description)){
+        $item_output = str_replace($args->link_after. '</a>', '<span class="walker_nav">'.$item->description .'</span>'
+            . $args->link_after. '</a>', $item_output);
+    }
+    return $item_output;
+}
+add_filter('walker_nav_menu_start_el', 'setup_walker_nav_menu', 10, 3);
+
+// setup footer 
+function customize_footer_on_theme_customization($wp_customize)
+{
+    
+    // Menu Position Setup
+    // Set customizer section info
+    $wp_customize->add_section('footer_copyright_customize', array(
+        'title' => __('Footer Option', 'setup_english'),
+        'description' => "You can customize your foooter copyright from here"
+    ));
+
+    // Set customizer settings info
+    $wp_customize->add_setting('footer_copyright_setting', array(
+        'default' => '&copy; Copyright 2023 | All right reserved.', // Set a default menu position
+    ));
+
+    // Set customizer control info
+    $wp_customize->add_control('footer_copyright_setting', array(
+        'label' => 'Footer Copyright',
+        'section' => 'footer_copyright_customize',
+        'setting' => 'footer_copyright_setting',
+    ));
+}
+
+add_action('customize_register', 'customize_footer_on_theme_customization');
