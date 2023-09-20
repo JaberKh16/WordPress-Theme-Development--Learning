@@ -1,0 +1,92 @@
+body{
+    background-color: blue;
+}
+
+.image-area1{
+    width: 100px;
+    height: 100px;
+}
+
+.image-area2{
+    width: 100px;
+    height: 100px;
+}
+
+body{
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poor Story', cursive;
+}
+
+.navbar {
+    background: #050555 !important;
+}
+.nav-link {
+    color: #FFFFFF !important;
+}
+
+.dropdown-menu{
+    background: #050555 !important;
+}
+
+.dropdown-item{
+    color: #FFFFFF !important;
+}
+
+.dropdown-menu li:hover{
+    color: #092272 !important;
+}
+
+.navbar-nav ul{
+    text-decoration: none;
+    list-style: none;
+    color: #FFFFFF;
+    display: flex;
+    padding: 10px 15px;
+    margin: 6px 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.page_item{
+    color: #FFFFFF !important;
+}
+
+.navbar-brand img{
+    width: 150px;
+    height: 40px;
+}
+
+
+/* Style the main navigation menu */
+.navbar-nav {
+    margin-right: 4rem; /* Adjust the right margin as needed */
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* Change the text color */
+    font-weight: bold; /* Adjust the font weight */
+    text-transform: uppercase; /* Convert text to uppercase */
+    margin-right: 20px; /* Adjust the right margin between menu items */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff6600; /* Change the text color on hover */
+}
+
+/* Style the dropdown menu */
+.navbar-nav .dropdown-menu {
+    background-color: #fff; /* Background color of the dropdown menu */
+    border: 1px solid #ddd; /* Border color */
+}
+
+.navbar-nav .dropdown-item {
+    color: #333; /* Change the text color */
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #ff6600; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
