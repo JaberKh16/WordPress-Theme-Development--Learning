@@ -8,6 +8,22 @@
                 </div>
             </div>
         </section>
+        <section id="footer-menu-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php 
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'footer-menu',
+                                    'depth' => 1
+                                )
+                            ); 
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </section>
     </footer>
     
     

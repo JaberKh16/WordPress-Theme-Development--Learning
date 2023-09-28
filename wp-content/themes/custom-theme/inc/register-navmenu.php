@@ -1,9 +1,20 @@
 <?php
-
+    /*
+        Syntax:
+        =======
+            register_nav_menus(
+                array(
+                    'slug' =>  __('Slug Value', 'text domain'),
+                    'slug' =>  __('Slug Value', 'text domain'),
+                )
+            );
+    */
+    
     // Register Menu
     register_nav_menus(
         array(
-            'primary-menu' =>  __('Main Menu', 'setup_english')    
+            'primary-menu' =>  __('Main Menu', 'setup_english'),
+            'footer-menu' =>  __('Footer Menu', 'setup_english'),
         )
     );
 
