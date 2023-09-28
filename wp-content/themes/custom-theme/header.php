@@ -35,7 +35,7 @@
                 <nav class="navbar navbar-expand-lg p-2">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="<?php home_url(); ?>">
-                        <img src="<?php get_template_directory_uri().'/custom-uploads/image-1.png'; ?>" alt="Logo Missing">
+                        <img src="<?php get_template_directory_uri().'/assets/images/image-1.png'; ?>" alt="Logo Missing">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -67,7 +67,7 @@
                         wp_nav_menu( array(
                             'theme_location' => 'primary-menu',
                             'menu_class' => 'navbar-nav me-auto',
-                            'depth' => 2, // to define
+                            'depth' => 2, // 0 mean no restriction, 1 means menu with only one level(no submenu), 2 means atleast one submenu
                             'walker' => new Bootstrap_Walker_Nav_Menu(),
                         ));
                     ?>
