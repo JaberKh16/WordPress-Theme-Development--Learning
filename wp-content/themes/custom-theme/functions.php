@@ -44,4 +44,4 @@ include_once(get_template_directory() . '/inc/pagination-setup.php');
 
 
 // setup custom posts
-include_once(get_template_directory() . '/inc/custom-posts-setup/custom-posts-setup.php');
+// include_once(get_template_directory() . '/inc/custom-posts-setup/custom-posts-setup.php');

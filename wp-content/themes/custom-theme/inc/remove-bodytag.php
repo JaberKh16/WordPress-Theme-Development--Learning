@@ -26,6 +26,9 @@ function remove_body_classes($classes) {
         'admin-bar',
         'logged-in',
         'no-customize-support',
+        'page-template-default',
+        'page',
+        'page-id-31',
         ''
     );
 
