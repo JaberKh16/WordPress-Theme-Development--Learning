@@ -9,10 +9,10 @@
     <div class="container">
         <main class="site-main" id="main">
               <!-- Hero Section -->
-            <section class="hero">Hero</section>
+            <!-- <section class="hero">Hero</section> -->
               <!-- Services Section -->
-            <section class="services">Services</section>
-              <!-- Blog Section -->
+            <!-- <section class="services">Services</section> -->
+            <!-- Blog Section -->
             <section class="home-blog">
                 <div class="container">
                     <div class="row">
@@ -42,7 +42,7 @@
                                             </div>
                                         <?php endwhile; ?>
                                     <?php else : ?>
-                                        <div class="blog-area">
+                                        <div class="blog-area_thumbnailsandlinks">
                                             <div class="post-thumbnails__area">
                                                 <!-- <?php echo the_post_thumbnail('post-thumbnails'); ?> -->
                                                 <a href="<?php the_permalink(); ?>"><?php echo the_post_thumbnail('post-thumbnails');?></a>
