@@ -31,8 +31,8 @@
     </div> -->
     <div class="menu-area">
         <div class="main-menu">
-            <div class="nav-container p-4">
-                <nav class="navbar navbar-expand-lg p-2">
+            <div class="nav-container">
+                <nav class="navbar navbar-expand-lg ps-4 pe-4">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="<?php home_url(); ?>">
                         <img src="<?php get_template_directory_uri().'/assets/images/image-1.png'; ?>" alt="Logo Missing">
