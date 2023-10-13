@@ -23,7 +23,7 @@
                             <div class="post-info">
                                 <p class="post-time">Posted in: <?php echo get_the_date(); ?></p>
                                 <p class="post-author">Posted By: <?php the_author_posts_link(); ?></p>
-                                <p class="post-categoyries">Categories: <?php the_category(''); ?></p>
+                                <p class="post-categoyries d-inline">Categories: <?php the_category(''); ?></p>
                                 <p class="post-tags">Tags: <?php the_tags('', ',')?></p>
                             </div>
                         </div>

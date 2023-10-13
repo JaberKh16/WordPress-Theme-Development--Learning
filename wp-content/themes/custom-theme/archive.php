@@ -1,6 +1,6 @@
 <?php
     /*
-    *  Template Name: General Template
+    *   This file is part of index file system
     */
     get_header();
 ?>
@@ -8,13 +8,23 @@
 <section id="body-area" class="site-content">
     <div class="container">
         <main class="site-main" id="main">
-              <!-- Blog Section -->
-            <section class="general-template-blog">
+            <h1 class="text-center">Archive Page</h1>
+            
+            <!-- Blog Section -->
+            <section class="home-blog">
                 <div class="container">
                     <div class="row">
+                        <?php
+                            the_archive_title('<h3 class="archive-title mb-3 mt-4">' , '</h3>'); 
+                        ?>
+
                         <!-- Blog Column Section -->
-                        <div class="col-md-9">
-                            
+                        <div class="col-md-8">
+                            <h1>Search Results:<?php get_search_query(); ?></h1> 
+                            <div class="widget-searchbar col-md-3 mt-4 d-inline mb-5 ml-2">
+                                <!-- // adding the wordpress search -->
+                                <?php get_search_form(); ?>
+                            </div>
                             <!-- Post Section -->
                             <div class="post-area">
                                 <!-- Blog Items Section -->
@@ -25,9 +35,13 @@
                                             <div class="blog-area">
                                                 <!-- Your code to display blog content goes here -->
                                                 <article>
-                                                    <h1 class="post-title"><?php the_title(); ?></h1>
+                                                    <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                                     <div class="meta-info">
-                                                        <div class="post-time-and-author">
+                                                        <div class="posts-info">
+                                                            <p class="post-time">Posted in: <?php echo get_the_date(); ?></p>
+                                                            <p class="post-author">Posted By: <?php the_author_posts_link(); ?></p>
+                                                            <p class="post-categoyries d-inline">Categories: <?php the_category(''); ?></p>
+                                                            <p class="post-tags">Tags: <?php the_tags('', ',')?></p>
                                                             <p class="post-content"><?php the_content();?></p>
                                                         </div>
                                                     </div>

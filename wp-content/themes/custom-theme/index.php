@@ -17,13 +17,19 @@
                 <div class="container">
                     <div class="row">
                         <!-- Blog Column Section -->
-                        <div class="col-md-9">
+                        <div class="col-md-8">
+                            <h1>Search Results:<?php get_search_query(); ?></h1> 
+                            <div class="widget-searchbar col-md-3 mt-4 d-inline mb-5 ml-2">
+                                <!-- // adding the wordpress search -->
+                                <?php get_search_form(); ?>
+                            </div>
                             <!-- Post Section -->
                             <div class="post-area">
                                 <!-- Blog Items Section -->
                                 <div class="blog-items">
                                     <?php if (have_posts() != null) : ?>
                                         <?php while (have_posts()) : the_post(); ?>
+                                        <?php  if("post" == get_post_type()): ?>
                                             <div class="blog-area">
                                                 <!-- Your code to display blog content goes here -->
                                                 <article>
@@ -40,6 +46,7 @@
                                                 </article>
                                                 
                                             </div>
+                                        <?php endif; ?>
                                         <?php endwhile; ?>
                                     <?php else : ?>
                                         <div class="blog-area_thumbnailsandlinks">
@@ -70,8 +77,18 @@
                         
                         </div>
                         <!-- Sidebar Column Section -->
-                        <div class="col-md-3">
+                        <div class="col-md-4 sidebar-container ml-4" id="sidebar-container">
                             <h2>Sidebar Area</h2>
+                            <?php if (is_active_sidebar('sidebar-widget')) : ?>
+                                <div id="sidebar" class="widget-area">
+                                    <?php dynamic_sidebar('sidebar-widget'); ?>
+                                </div>
+                            <?php endif; ?>
+                            <div class="widget-searchbar col-md-3 mt-4">
+                                <!-- // adding the wordpress search -->
+                                <?php get_search_form(); ?>
+                            </div>
+
                         </div>
                     </div>
                 </div>

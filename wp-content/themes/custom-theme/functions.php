@@ -45,3 +45,7 @@ include_once(get_template_directory() . '/inc/pagination-setup.php');
 
 // setup custom posts
 // include_once(get_template_directory() . '/inc/custom-posts-setup/custom-posts-setup.php');
+
+
+// setup sidebar widget
+include_once(get_template_directory() . '/inc/register-sidebar.php');

@@ -35,7 +35,10 @@
                 <nav class="navbar navbar-expand-lg ps-4 pe-4">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="<?php home_url(); ?>">
-                        <img src="<?php get_template_directory_uri().'/assets/images/image-1.png'; ?>" alt="Logo Missing">
+                        <!-- Braning Logo -->
+                        <div class="image-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image-1.png" alt="Logo Missing">
+                        </div>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -82,4 +85,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Make dropdown items clickable
+        jQuery(document).ready(function($) {
+            $('.navbar-nav .nav-item.dropdown ul.dropdown-menu li').click(function() {
+                var url = $(this).find('a').attr('href');
+                if (url) {
+                    window.location = url;
+                }
+            });
+        });
+
+    </script>
     
