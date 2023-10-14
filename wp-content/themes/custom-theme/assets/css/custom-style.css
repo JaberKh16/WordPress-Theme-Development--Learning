@@ -180,6 +180,50 @@ body{
 }
 
 
+
+/* ================================================================= */
+Wordpress Default SearchForm On Sidebar Widgets
+/* ================================================================= */
+
+.hero-section{
+    background-size: cover;
+    max-width: 100%;
+}
+
+.hero-section .hero-info{
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.hero-section .hero-info p{
+    padding: 10px 50px;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.hero-section .hero-info a{
+    padding: 10px 50px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+.hero-section .hero-info a:hover{
+    color:#FFFFFF;
+    background-color: #333;
+    border: none;
+    outline: none;
+}
+
+.hero-section  .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* ================================================================= */
     Wordpress Default SearchForm On Sidebar Widgets
 /* ================================================================= */

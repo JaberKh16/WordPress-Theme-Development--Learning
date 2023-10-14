@@ -1,5 +1,12 @@
 <?php
 
+/*
+*   $wp_customize ==> An instance of WordpPress Customize Manger Class which handles the customization of
+*                     section, control and panels.
+*   $wp_options ==> An table used by $wp_customize to add necessary data. To check theme_mods() to check for the data.
+*
+*/
+
 // function customize_header_logo_on_theme_customization($wp_customize)
 // {
 //     // Set customizer section info
@@ -87,7 +94,7 @@ function customize_header_logo_on_theme_customization($wp_customize)
 
 }
 
-add_action('customize_register', 'customize_header_logo_on_theme_customization');
+// add_action('customize_register', 'customize_header_logo_on_theme_customization');
 
 // Setup Menu Position
 function customize_menu_position_on_theme_customization($wp_customize)

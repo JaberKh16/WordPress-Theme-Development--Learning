@@ -15,23 +15,10 @@
                 while( have_posts() ):
                     the_post();
                     ?>
-                    <!-- Your code to display blog content goes here -->
-                    <article id="post-<?php the_ID(); ?>" <?php post_class() ?>>
-                    <header>
-                        <h1 class="post-title"><?php the_title(); ?></h1>
-                        <div class="meta-info">
-                            <div class="post-info">
-                                <p class="post-time">Posted in: <?php echo get_the_date(); ?></p>
-                                <p class="post-author">Posted By: <?php the_author_posts_link(); ?></p>
-                                <p class="post-categoyries d-inline">Categories: <?php the_category(''); ?></p>
-                                <p class="post-tags">Tags: <?php the_tags('', ',')?></p>
-                            </div>
-                        </div>
-                        <div class="post-content">
-                            <p class="post-content"><?php the_content();?></p>
-                        </div>
-                    <header>
-                    </article>
+                    <!-- // get the template parts --
+                    <?php
+                        get_template_part('template-parts/content-posts/posts'); 
+                    ?>
                 <?php
                 // comment code
                 if( comments_open () || get_comments_number() ){

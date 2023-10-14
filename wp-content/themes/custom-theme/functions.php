@@ -5,7 +5,7 @@
 *
 */
 // include theme title
-include_once('inc/default-themeinfo.php');
+include_once('inc/default-theme-support-config.php');
 
 
 // remove body tag
@@ -49,3 +49,11 @@ include_once(get_template_directory() . '/inc/pagination-setup.php');
 
 // setup sidebar widget
 include_once(get_template_directory() . '/inc/register-sidebar.php');
+
+
+// setup wp-open-body for compability with WordPress 5.2 or custom google analytics scripts setup
+include_once(get_template_directory() . '/inc/wp-body-open-external-scripts.php');
+
+
+// setup hero section
+include_once(get_template_directory() . '/inc/customize-hero-section.php');
