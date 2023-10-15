@@ -6,7 +6,7 @@
             <div class="blog-area">
                 <!-- Your code to display blog content goes here -->
                 <article>
-                    <h1 class="post-title"><?php the_title(); ?></h1>
+                    <<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
                     <div class="meta-info">
                         <div class="post-time-and-author">
                             <p class="post-content"><?php the_content();?></p>

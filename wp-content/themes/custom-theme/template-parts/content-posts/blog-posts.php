@@ -15,7 +15,7 @@
                     <div class="blog-area">
                         <!-- Your code to display blog content goes here -->
                         <article>
-                            <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
                             <div class="meta-info">
                                 <div class="posts-info">
                                     <p class="post-time">Posted in: <?php echo get_the_date(); ?></p>

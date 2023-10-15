@@ -57,3 +57,12 @@ include_once(get_template_directory() . '/inc/wp-body-open-external-scripts.php'
 
 // setup hero section
 include_once(get_template_directory() . '/inc/customize-hero-section.php');
+
+
+// setup blog/category customizer
+// include_once(get_template_directory() . '/inc/custom-blog-category/customize-blog-category.php');
+
+
+// setup language internationalization
+$text_domain = "setup_english";
+load_theme_textdomain($text_domain, get_template_directory() . '/languages/');
