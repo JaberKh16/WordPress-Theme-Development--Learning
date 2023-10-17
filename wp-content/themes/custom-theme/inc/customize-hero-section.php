@@ -77,7 +77,7 @@ function customize_hero_section($wp_customize)
     $wp_customize->add_control('set_hero_button_link', array(
         'label' => 'Hero Button Hyperlink',
         'section' => 'sec_hero',
-        'type' => 'button',
+        'type' => 'text',
     ));
 
 
