@@ -70,3 +70,52 @@ include_once(get_template_directory() . '/inc/customize-hero-section.php');
 // setup blog/category customizer
 // include_once(get_template_directory() . '/inc/custom-blog-category/customize-blog-category.php');
 
+function customize_header_logo_on_theme_customization($wp_customize)
+{
+    // Set customizer section info
+    $wp_customize->add_section('header_customize', array(
+        'title' => __('Header Logo', 'setup_english'),
+        'description' => "You can customize your header logo from here"
+    ));
+
+    // Set customizer settings info
+    $wp_customize->add_setting('logo_setting', array(
+        'default' => get_bloginfo('template_directory').'/img/image-1.png'
+    ));
+
+    // Set customizer control info
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logo_setting', array(
+        'label' => 'New Logo Upload',
+        'section' => 'header_customize',
+        'setting' => 'logo_setting'
+    )));
+
+    // Handle image upload and directory creation
+    if (isset($_FILES['logo_setting']) && $_FILES['logo_setting']['error'] === UPLOAD_ERR_OK) {
+        $upload_dir = wp_upload_dir(); // Get the default uploads directory
+        var_dump($upload_dir);
+
+        // Create a new directory inside the uploads directory (e.g., 'header_logos')
+        $new_directory = trailingslashit($upload_dir['basedir']) . 'header_logos';
+        var_dump($new_directory);
+
+        // if the directory doesnt exist 
+        if (!file_exists($new_directory)) {
+            mkdir($new_directory, 0755, true); // Create the directory with 0755 permissions
+        }
+
+        // Generate a unique filename for the uploaded image
+        $unique_filename = wp_unique_filename($new_directory, $_FILES['logo_setting']['name']);
+        var_dump($unique_filename);
+
+        // Move the uploaded image to the new directory
+        $new_file_path = trailingslashit($new_directory) . $unique_filename;
+        move_uploaded_file($_FILES['logo_setting']['tmp_name'], $new_file_path);
+        var_dump($_FILES['logo_setting']['tmp_name']);
+
+        // Set the value of the logo_setting to the new file path
+        set_theme_mod('logo_setting', $new_file_path);
+    }
+}
+
+add_action('customize_register', 'customize_header_logo_on_theme_customization');
